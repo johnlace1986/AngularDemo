@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BreedListComponent } from './breed-list/breed-list.component';
 import { RandomImageComponent } from './random-image/random-image.component';
-import { DogApiService } from './dog-api.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
