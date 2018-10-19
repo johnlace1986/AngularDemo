@@ -1,0 +1,18 @@
+<h3>Breed</h3>
+
+<select class="form-control" [(ngModel)]="selectedBreed" (change)="breedChanged()">
+    <option *ngFor="let breed of breeds" [ngValue]="breed">{{breed.name}}</option>
+</select>
+
+<div *ngIf="selectedBreed && selectedBreed.subBreeds.length > 1">
+  <h3>Sub-Breed</h3>
+
+  <select class="form-control" [(ngModel)]="selectedSubBreed" (change)="subBreedChanged()">
+    <option value="">All</option>
+    <option *ngFor="let subBreed of selectedBreed.subBreeds" [ngValue]="subBreed">{{subBreed}}</option>
+  </select>
+</div>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let image of images"><a href="{{image}}" target="_blank">{{image}}</a></li>
+</ul>

@@ -1,0 +1,9 @@
+.random-image {
+    height: 240px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.random-image img {
+    max-height: 240px;
+}
