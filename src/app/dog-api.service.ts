@@ -14,7 +14,7 @@ export class DogApiService {
 
   }
 
-  private mapMessage(response: any): Observable<any> {
+  private mapMessage<T>(response: any): Observable<T> {
     const doMap = map((response: any) => {
       return response.message;
     });
@@ -23,7 +23,7 @@ export class DogApiService {
   }
 
   getRandomImage(): Observable<string> {
-    return this.mapMessage(this._http.get<any>('https://dog.ceo/api/breeds/image/random'));
+    return this.mapMessage<string>(this._http.get<any>('https://dog.ceo/api/breeds/image/random'));
   }
 
   getBreeds(): Observable<Array<IBreed>> {
@@ -50,6 +50,6 @@ export class DogApiService {
   }
 
   getByBreed(breed: string): Observable<Array<string>> {
-    return this.mapMessage(this._http.get<any>('https://dog.ceo/api/breed/'+ breed + '/images'))
+    return this.mapMessage<Array<string>>(this._http.get<any>('https://dog.ceo/api/breed/'+ breed + '/images'))
   }
 }
