@@ -5,14 +5,14 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BreedListComponent } from './breed-list/breed-list.component';
-import { RandomImageComponent } from './random-image/random-image.component';
+import { RandomDogComponent } from './random-dog/random-dog.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     BreedListComponent,
-    RandomImageComponent
+    RandomDogComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     RouterModule.forRoot([
       { path: 'breeds', component: BreedListComponent },
-      { path: 'random', component: RandomImageComponent },
+      { path: 'random', component: RandomDogComponent },
       { path: '**', redirectTo: 'random' }
     ])
   ],

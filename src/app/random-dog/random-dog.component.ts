@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DogApiService } from '../dog-api.service';
 
 @Component({
-  selector: 'app-random-image',
-  templateUrl: './random-image.component.html',
-  styleUrls: ['./random-image.component.css']
+  selector: 'app-random-dog',
+  templateUrl: './random-dog.component.html',
+  styleUrls: ['./random-dog.component.css']
 })
-export class RandomImageComponent implements OnInit {
+export class RandomDogComponent implements OnInit {
 
   public imageUrl: string;
   public images: Array<string> = new Array<string>();

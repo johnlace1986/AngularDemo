@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RandomImageComponent } from './random-image.component';
+import { RandomDogComponent } from './random-dog.component';
 
-describe('RandomImageComponent', () => {
-  let component: RandomImageComponent;
-  let fixture: ComponentFixture<RandomImageComponent>;
+describe('RandomDogComponent', () => {
+  let component: RandomDogComponent;
+  let fixture: ComponentFixture<RandomDogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RandomImageComponent ]
+      declarations: [ RandomDogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RandomImageComponent);
+    fixture = TestBed.createComponent(RandomDogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
