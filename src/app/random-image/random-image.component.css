@@ -7,3 +7,7 @@
 .random-image img {
     max-height: 240px;
 }
+
+.btn {
+    margin-left: 6px;
+}

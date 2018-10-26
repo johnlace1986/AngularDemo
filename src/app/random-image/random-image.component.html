@@ -2,4 +2,5 @@
   <img src="{{imageUrl}}" class="img-thumbnail">
 </div>
 
-<button class="btn" (click)="randomise()">Randomise</button>
+<button class="btn" [disabled]="selectedIndex === 0" (click)="previous()">Previous</button>
+<button class="btn" (click)="next()">Next</button>
