@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { BreedListComponent } from './breed-list/breed-list.component';
 import { RandomDogComponent } from './random-dog/random-dog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BreedListComponent,
-    RandomDogComponent
+    RandomDogComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot([
       { path: '', redirectTo: 'random', pathMatch: 'full' },
       { path: 'random', component: RandomDogComponent },
-      { path: 'breeds', component: BreedListComponent }
+      { path: 'breeds', component: BreedListComponent },
+      { path: '**', component: NotFoundComponent }
     ])
   ],
   providers: [],
