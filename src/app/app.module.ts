@@ -19,9 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: 'breeds', component: BreedListComponent },
+      { path: '', redirectTo: 'random', pathMatch: 'full' },
       { path: 'random', component: RandomDogComponent },
-      { path: '**', redirectTo: 'random' }
+      { path: 'breeds', component: BreedListComponent }
     ])
   ],
   providers: [],

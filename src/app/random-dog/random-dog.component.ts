@@ -8,14 +8,13 @@ import { DogApiService } from '../dog-api.service';
 })
 export class RandomDogComponent implements OnInit {
 
-  public imageUrl: string;
+  public imageUrl: string = 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif';
 
   constructor(private _service: DogApiService) {
-    this.randomise();
   }
 
   ngOnInit() {
-    
+    this.randomise();    
   }
 
   public randomise() {

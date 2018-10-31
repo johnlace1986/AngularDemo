@@ -10,7 +10,9 @@ import { IBreed } from './breed';
 })
 export class DogApiService {
 
-  constructor(private _http: HttpClient) {
+  private _baseAddress: string = 'https://dog.ceo/api/'
+
+  constructor(private _client: HttpClient) {
 
   }
 
@@ -23,7 +25,7 @@ export class DogApiService {
   }
 
   getRandomImage(): Observable<string> {
-    return this.mapMessage<string>(this._http.get<any>('https://dog.ceo/api/breeds/image/random'));
+    return this.mapMessage<string>(this._client.get<any>(this._baseAddress + 'breeds/image/random'));
   }
 
   getBreeds(): Observable<Array<IBreed>> {
@@ -46,10 +48,10 @@ export class DogApiService {
       return breeds;
     });
 
-    return doMap(this._http.get<any>('https://dog.ceo/api/breeds/list/all'));
+    return doMap(this._client.get<any>(this._baseAddress + 'breeds/list/all'));
   }
 
   getByBreed(breed: string): Observable<Array<string>> {
-    return this.mapMessage<Array<string>>(this._http.get<any>('https://dog.ceo/api/breed/'+ breed + '/images'))
+    return this.mapMessage<Array<string>>(this._client.get<any>(this._baseAddress + 'breed/'+ breed + '/images'))
   }
 }
