@@ -8,7 +8,7 @@ import { DogApiService } from '../dog-api.service';
 })
 export class RandomDogComponent implements OnInit {
 
-  public imageUrl: string = 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif';
+  public imageUrl: string = '';
 
   constructor(private _service: DogApiService) {
   }
