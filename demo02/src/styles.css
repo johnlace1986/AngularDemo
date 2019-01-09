@@ -1,0 +1,12 @@
+.page-header {
+    overflow: hidden;
+  }
+  
+  .logo {
+    height: 64px;
+    margin-right: 15px;
+  }
+  
+  .navbar ul li a.active {
+    color: #000 !important;
+  }
